@@ -1,0 +1,28 @@
+{
+  "network": "livenet",
+  "port": 3001,
+  "services": [
+    "explorer-api",
+    "bitcoind",
+    "web"
+  ],
+  "servicesConfig": {
+    "bitcoind": {
+      "spawn": {
+        "datadir": "/home/ows/config",
+        "exec": "docker"
+      },
+      "connect": {
+        "rpcprotocol": "http",
+        "rpchost": "bitcoin-abc",
+        "rpcuser": "bitcoin",
+        "rpcpassword": "local321",
+        "rpcstrict": true
+      }
+    },
+    "explorer-api": {
+      "module": "bch-explorer-api",
+      "apiPrefix": "explorer-api"
+    }
+  }
+}

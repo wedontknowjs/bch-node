@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+var bchnode = require('../lib/cli/bchnode');
+bchnode();
